@@ -36,11 +36,14 @@ class ScheduleTableViewCell: UITableViewCell {
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.05) { [self] in
-            setConstraints()
-        }
-
+        
+//MARK: Fix constrains bug (first way)
+//        DispatchQueue.main.asyncAfter(deadline: .now() + 0.05) { [self] in
+//            setConstraints()
+//        }
     }
+//MARK: Fix constrains bug (second way)
+    override func layoutSubviews() { setConstraints() }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
