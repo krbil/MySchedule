@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		9EB2263D198AD750A5BEA23A /* Pods_MySchedule.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04084B67CC49D2E31E3EA12B /* Pods_MySchedule.framework */; };
 		EA38057228679A6E0074406E /* ScheduleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA38057128679A6E0074406E /* ScheduleTableViewCell.swift */; };
+		EA3805762867B57D0074406E /* UIStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3805752867B57D0074406E /* UIStackView.swift */; };
+		EA3805782867BFBC0074406E /* UILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3805772867BFBC0074406E /* UILabel.swift */; };
+		EA38057A2867C43F0074406E /* UIFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3805792867C43F0074406E /* UIFont.swift */; };
 		EAEDE33C286315B10009C60B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAEDE33B286315B10009C60B /* AppDelegate.swift */; };
 		EAEDE33E286315B10009C60B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAEDE33D286315B10009C60B /* SceneDelegate.swift */; };
 		EAEDE340286315B10009C60B /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAEDE33F286315B10009C60B /* TabBarViewController.swift */; };
@@ -24,6 +27,9 @@
 		07608BC68663E752B47BEC48 /* Pods-MySchedule.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MySchedule.release.xcconfig"; path = "Target Support Files/Pods-MySchedule/Pods-MySchedule.release.xcconfig"; sourceTree = "<group>"; };
 		B7D0A776E8654A0F81955820 /* Pods-MySchedule.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MySchedule.debug.xcconfig"; path = "Target Support Files/Pods-MySchedule/Pods-MySchedule.debug.xcconfig"; sourceTree = "<group>"; };
 		EA38057128679A6E0074406E /* ScheduleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleTableViewCell.swift; sourceTree = "<group>"; };
+		EA3805752867B57D0074406E /* UIStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIStackView.swift; sourceTree = "<group>"; };
+		EA3805772867BFBC0074406E /* UILabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabel.swift; sourceTree = "<group>"; };
+		EA3805792867C43F0074406E /* UIFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFont.swift; sourceTree = "<group>"; };
 		EAEDE338286315B10009C60B /* MySchedule.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MySchedule.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EAEDE33B286315B10009C60B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EAEDE33D286315B10009C60B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -81,6 +87,24 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
+		EA3805732867B5480074406E /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				EA3805742867B5630074406E /* UIKit */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		EA3805742867B5630074406E /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				EA3805752867B57D0074406E /* UIStackView.swift */,
+				EA3805772867BFBC0074406E /* UILabel.swift */,
+				EA3805792867C43F0074406E /* UIFont.swift */,
+			);
+			path = UIKit;
+			sourceTree = "<group>";
+		};
 		EAEDE32F286315B10009C60B = {
 			isa = PBXGroup;
 			children = (
@@ -102,6 +126,7 @@
 		EAEDE33A286315B10009C60B /* MySchedule */ = {
 			isa = PBXGroup;
 			children = (
+				EA3805732867B5480074406E /* Extensions */,
 				EAEDE35128631CA70009C60B /* Application */,
 				EAEDE34F28631C8C0009C60B /* Controllers */,
 				EA38056D286799650074406E /* Model */,
@@ -257,9 +282,12 @@
 				EAEDE340286315B10009C60B /* TabBarViewController.swift in Sources */,
 				EA38057228679A6E0074406E /* ScheduleTableViewCell.swift in Sources */,
 				EAEDE33C286315B10009C60B /* AppDelegate.swift in Sources */,
+				EA3805762867B57D0074406E /* UIStackView.swift in Sources */,
+				EA3805782867BFBC0074406E /* UILabel.swift in Sources */,
 				EAEDE35328631CF10009C60B /* ScheduleViewController.swift in Sources */,
 				EAEDE33E286315B10009C60B /* SceneDelegate.swift in Sources */,
 				EAEDE35528631D020009C60B /* ContactsViewController.swift in Sources */,
+				EA38057A2867C43F0074406E /* UIFont.swift in Sources */,
 				EAEDE35728631D180009C60B /* TasksViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
