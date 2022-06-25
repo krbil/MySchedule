@@ -1,5 +1,5 @@
 //
-//  TasksViewController.swift
+//  SceduleViewController.swift
 //  MySchedule
 //
 //  Created by Илья Крылов on 22.06.2022.
@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 import FSCalendar
 
-class TasksViewController: UIViewController {
+class ScheduleViewController: UIViewController {
     var calendarHieghtConstraint: NSLayoutConstraint!
     private var calendar: FSCalendar = {
         let calendar = FSCalendar()
@@ -26,7 +26,7 @@ class TasksViewController: UIViewController {
     }()
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "Schedule"
+        title = "Scedule"
         view.backgroundColor = .white
         calendar.scope = .week
         setConstraints()
@@ -76,7 +76,7 @@ class TasksViewController: UIViewController {
 }
 
 //MARK: FSCalendarDataSource, FSCalendarDelegate
-extension TasksViewController: FSCalendarDataSource, FSCalendarDelegate {
+extension ScheduleViewController: FSCalendarDataSource, FSCalendarDelegate {
     func calendar(_ calendar: FSCalendar, boundingRectWillChange bounds: CGRect, animated: Bool) {
         calendarHieghtConstraint.constant = bounds.height
         view.layoutIfNeeded()
@@ -87,7 +87,7 @@ extension TasksViewController: FSCalendarDataSource, FSCalendarDelegate {
 }
 
 //MARK: Set Constraints
-extension TasksViewController {
+extension ScheduleViewController {
     func setConstraints() {
         
         view.addSubview(calendar)
@@ -109,3 +109,5 @@ extension TasksViewController {
         ])
     }
 }
+
+

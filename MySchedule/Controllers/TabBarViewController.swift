@@ -15,10 +15,10 @@ class TabBarViewController: UITabBarController {
        
     }
     func setupTabBar() {
-        let sceduleViewController = createNavigationController(viewController: SceduleViewController(), itemName: "Scedule", itemeImage: "calendar.badge.clock")
+        let scheduleViewController = createNavigationController(viewController: ScheduleViewController(), itemName: "Scedule", itemeImage: "calendar.badge.clock")
         let tasksViewController = createNavigationController(viewController: TasksViewController(), itemName: "Tasks", itemeImage: "text.badge.checkmark")
         let contactsViewController = createNavigationController(viewController: ContactsViewController(), itemName: "Contacts", itemeImage: "rectangle.stack.person.crop")
-        viewControllers = [sceduleViewController, tasksViewController, contactsViewController]
+        viewControllers = [scheduleViewController, tasksViewController, contactsViewController]
         
     }
 

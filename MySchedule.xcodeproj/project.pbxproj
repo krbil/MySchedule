@@ -13,7 +13,7 @@
 		EAEDE340286315B10009C60B /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAEDE33F286315B10009C60B /* TabBarViewController.swift */; };
 		EAEDE345286315B20009C60B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EAEDE344286315B20009C60B /* Assets.xcassets */; };
 		EAEDE348286315B20009C60B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EAEDE346286315B20009C60B /* LaunchScreen.storyboard */; };
-		EAEDE35328631CF10009C60B /* SceduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAEDE35228631CF10009C60B /* SceduleViewController.swift */; };
+		EAEDE35328631CF10009C60B /* ScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAEDE35228631CF10009C60B /* ScheduleViewController.swift */; };
 		EAEDE35528631D020009C60B /* ContactsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAEDE35428631D020009C60B /* ContactsViewController.swift */; };
 		EAEDE35728631D180009C60B /* TasksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAEDE35628631D180009C60B /* TasksViewController.swift */; };
 /* End PBXBuildFile section */
@@ -29,7 +29,7 @@
 		EAEDE344286315B20009C60B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EAEDE347286315B20009C60B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EAEDE349286315B20009C60B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		EAEDE35228631CF10009C60B /* SceduleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceduleViewController.swift; sourceTree = "<group>"; };
+		EAEDE35228631CF10009C60B /* ScheduleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleViewController.swift; sourceTree = "<group>"; };
 		EAEDE35428631D020009C60B /* ContactsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsViewController.swift; sourceTree = "<group>"; };
 		EAEDE35628631D180009C60B /* TasksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -52,7 +52,6 @@
 				B7D0A776E8654A0F81955820 /* Pods-MySchedule.debug.xcconfig */,
 				07608BC68663E752B47BEC48 /* Pods-MySchedule.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -96,7 +95,7 @@
 			isa = PBXGroup;
 			children = (
 				EAEDE33F286315B10009C60B /* TabBarViewController.swift */,
-				EAEDE35228631CF10009C60B /* SceduleViewController.swift */,
+				EAEDE35228631CF10009C60B /* ScheduleViewController.swift */,
 				EAEDE35628631D180009C60B /* TasksViewController.swift */,
 				EAEDE35428631D020009C60B /* ContactsViewController.swift */,
 			);
@@ -238,7 +237,7 @@
 			files = (
 				EAEDE340286315B10009C60B /* TabBarViewController.swift in Sources */,
 				EAEDE33C286315B10009C60B /* AppDelegate.swift in Sources */,
-				EAEDE35328631CF10009C60B /* SceduleViewController.swift in Sources */,
+				EAEDE35328631CF10009C60B /* ScheduleViewController.swift in Sources */,
 				EAEDE33E286315B10009C60B /* SceneDelegate.swift in Sources */,
 				EAEDE35528631D020009C60B /* ContactsViewController.swift in Sources */,
 				EAEDE35728631D180009C60B /* TasksViewController.swift in Sources */,
