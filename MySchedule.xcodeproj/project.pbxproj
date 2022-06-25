@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		9EB2263D198AD750A5BEA23A /* Pods_MySchedule.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04084B67CC49D2E31E3EA12B /* Pods_MySchedule.framework */; };
+		EA38057228679A6E0074406E /* ScheduleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA38057128679A6E0074406E /* ScheduleTableViewCell.swift */; };
 		EAEDE33C286315B10009C60B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAEDE33B286315B10009C60B /* AppDelegate.swift */; };
 		EAEDE33E286315B10009C60B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAEDE33D286315B10009C60B /* SceneDelegate.swift */; };
 		EAEDE340286315B10009C60B /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAEDE33F286315B10009C60B /* TabBarViewController.swift */; };
@@ -22,6 +23,7 @@
 		04084B67CC49D2E31E3EA12B /* Pods_MySchedule.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MySchedule.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		07608BC68663E752B47BEC48 /* Pods-MySchedule.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MySchedule.release.xcconfig"; path = "Target Support Files/Pods-MySchedule/Pods-MySchedule.release.xcconfig"; sourceTree = "<group>"; };
 		B7D0A776E8654A0F81955820 /* Pods-MySchedule.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MySchedule.debug.xcconfig"; path = "Target Support Files/Pods-MySchedule/Pods-MySchedule.debug.xcconfig"; sourceTree = "<group>"; };
+		EA38057128679A6E0074406E /* ScheduleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleTableViewCell.swift; sourceTree = "<group>"; };
 		EAEDE338286315B10009C60B /* MySchedule.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MySchedule.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EAEDE33B286315B10009C60B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EAEDE33D286315B10009C60B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -63,6 +65,22 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		EA38056D286799650074406E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				EA38056E2867996E0074406E /* Cell */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		EA38056E2867996E0074406E /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				EA38057128679A6E0074406E /* ScheduleTableViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		EAEDE32F286315B10009C60B = {
 			isa = PBXGroup;
 			children = (
@@ -86,6 +104,7 @@
 			children = (
 				EAEDE35128631CA70009C60B /* Application */,
 				EAEDE34F28631C8C0009C60B /* Controllers */,
+				EA38056D286799650074406E /* Model */,
 				EAEDE35028631C990009C60B /* Resources */,
 			);
 			path = MySchedule;
@@ -236,6 +255,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EAEDE340286315B10009C60B /* TabBarViewController.swift in Sources */,
+				EA38057228679A6E0074406E /* ScheduleTableViewCell.swift in Sources */,
 				EAEDE33C286315B10009C60B /* AppDelegate.swift in Sources */,
 				EAEDE35328631CF10009C60B /* ScheduleViewController.swift in Sources */,
 				EAEDE33E286315B10009C60B /* SceneDelegate.swift in Sources */,
