@@ -12,6 +12,7 @@
 		EA3805762867B57D0074406E /* UIStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3805752867B57D0074406E /* UIStackView.swift */; };
 		EA3805782867BFBC0074406E /* UILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3805772867BFBC0074406E /* UILabel.swift */; };
 		EA38057A2867C43F0074406E /* UIFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3805792867C43F0074406E /* UIFont.swift */; };
+		EA38057C2868F8F30074406E /* TasksTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA38057B2868F8F30074406E /* TasksTableViewCell.swift */; };
 		EAEDE33C286315B10009C60B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAEDE33B286315B10009C60B /* AppDelegate.swift */; };
 		EAEDE33E286315B10009C60B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAEDE33D286315B10009C60B /* SceneDelegate.swift */; };
 		EAEDE340286315B10009C60B /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAEDE33F286315B10009C60B /* TabBarViewController.swift */; };
@@ -30,6 +31,7 @@
 		EA3805752867B57D0074406E /* UIStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIStackView.swift; sourceTree = "<group>"; };
 		EA3805772867BFBC0074406E /* UILabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabel.swift; sourceTree = "<group>"; };
 		EA3805792867C43F0074406E /* UIFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFont.swift; sourceTree = "<group>"; };
+		EA38057B2868F8F30074406E /* TasksTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksTableViewCell.swift; sourceTree = "<group>"; };
 		EAEDE338286315B10009C60B /* MySchedule.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MySchedule.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EAEDE33B286315B10009C60B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EAEDE33D286315B10009C60B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -83,6 +85,7 @@
 			isa = PBXGroup;
 			children = (
 				EA38057128679A6E0074406E /* ScheduleTableViewCell.swift */,
+				EA38057B2868F8F30074406E /* TasksTableViewCell.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -289,6 +292,7 @@
 				EAEDE35528631D020009C60B /* ContactsViewController.swift in Sources */,
 				EA38057A2867C43F0074406E /* UIFont.swift in Sources */,
 				EAEDE35728631D180009C60B /* TasksViewController.swift in Sources */,
+				EA38057C2868F8F30074406E /* TasksTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

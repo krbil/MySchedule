@@ -27,6 +27,7 @@ class ScheduleViewController: UIViewController {
     
     let tableView: UITableView = {
         let tableView = UITableView()
+        tableView.bounces = false
         tableView.translatesAutoresizingMaskIntoConstraints = false
         return tableView
     }()
@@ -91,15 +92,23 @@ class ScheduleViewController: UIViewController {
 //MARK: UITableViewDelegate, UITableViewDataSource
 extension ScheduleViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return 10
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: idScheduleCell, for: indexPath) as! ScheduleTableViewCell
+//        switch indexPath.row {
+//        case 0:
+//            cell.backgroundColor = #colorLiteral(red: 1, green: 0.6593179703, blue: 0.7289463282, alpha: 1)
+//        case 1:
+//            cell.backgroundColor = #colorLiteral(red: 0.9607843161, green: 0.7058823705, blue: 0.200000003, alpha: 1)
+//        default:
+//            cell.backgroundColor = #colorLiteral(red: 0.5607843161, green: 0.158823705, blue: 0.3000003, alpha: 1)
+//        }
         return cell
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 90
+        return 80
     }
 }
 
@@ -141,7 +150,7 @@ extension ScheduleViewController {
             tableView.topAnchor.constraint(equalTo: showHideButton.bottomAnchor, constant: 10),
             tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 0),
             tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: 0),
-            tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 0)
+            tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -80)
             
         ])
     }

@@ -26,6 +26,7 @@ class ScheduleTableViewCell: UITableViewCell {
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.05) { [self] in
             setConstraints()
         }
+        self.selectionStyle = .none
     }
 //MARK: Fix constrains bug (second way)
 //    override func layoutSubviews() { setConstraints() }

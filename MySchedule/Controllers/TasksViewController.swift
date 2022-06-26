@@ -24,6 +24,16 @@ class TasksViewController: UIViewController {
         button.titleLabel?.font = UIFont(name: "Avenir Next Demi Bold", size: 14)
         return button
     }()
+    
+    let tableView: UITableView = {
+        let tableView = UITableView()
+        tableView.bounces = false
+        tableView.translatesAutoresizingMaskIntoConstraints = false
+        return tableView
+    }()
+    
+    let idTasksCell = "TasksCell"
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Schedule"
@@ -34,6 +44,9 @@ class TasksViewController: UIViewController {
         swipeAction()
         calendar.delegate = self
         calendar.dataSource = self
+        tableView.delegate = self
+        tableView.dataSource = self
+        tableView.register(TasksTableViewCell.self, forCellReuseIdentifier: idTasksCell)
     }
     @objc func showHideButtonTapped() {
         if calendar.scope == .week {
@@ -74,7 +87,28 @@ class TasksViewController: UIViewController {
     }
     
 }
-
+//MARK: UITableViewDelegate, UITableViewDataSource
+extension TasksViewController: UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 10
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: idTasksCell, for: indexPath) as! TasksTableViewCell
+//        switch indexPath.row {
+//        case 0:
+//            cell.backgroundColor = #colorLiteral(red: 1, green: 0.6593179703, blue: 0.7289463282, alpha: 1)
+//        case 1:
+//            cell.backgroundColor = #colorLiteral(red: 0.9607843161, green: 0.7058823705, blue: 0.200000003, alpha: 1)
+//        default:
+//            cell.backgroundColor = #colorLiteral(red: 0.5607843161, green: 0.158823705, blue: 0.3000003, alpha: 1)
+//        }
+        return cell
+    }
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 80
+    }
+}
 //MARK: FSCalendarDataSource, FSCalendarDelegate
 extension TasksViewController: FSCalendarDataSource, FSCalendarDelegate {
     func calendar(_ calendar: FSCalendar, boundingRectWillChange bounds: CGRect, animated: Bool) {
@@ -106,6 +140,15 @@ extension TasksViewController {
             showHideButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 10),
             showHideButton.widthAnchor.constraint(equalToConstant: 120),
             showHideButton.heightAnchor.constraint(equalToConstant: 20)
+        ])
+        
+        view.addSubview(tableView)
+        NSLayoutConstraint.activate([
+            tableView.topAnchor.constraint(equalTo: showHideButton.bottomAnchor, constant: 10),
+            tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 0),
+            tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: 0),
+            tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -100)
+            
         ])
     }
 }
