@@ -15,29 +15,35 @@ class TasksTableViewCell: UITableViewCell {
         let button = UIButton()
         button.setBackgroundImage(UIImage(systemName: "chevron.down.circle"), for: .normal)
         button.tintColor = .black
-        
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
-        
     }()
+    weak var cellTaskDelegate: PressReadyTasksButtonProtocol?
+    var index: IndexPath?
+    
+    
     
  
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
-//MARK: Fix constrains bug (first way)
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.05) { [self] in
-            setConstraints()
-        }
+        setConstraints()
+        taskDescription.numberOfLines = 2
         self.selectionStyle = .none
+        readyButton.addTarget(self, action: #selector(readyButtonTapped), for: .touchUpInside)
     }
-//MARK: Fix constrains bug (second way)
-//    override func layoutSubviews() { setConstraints() }
+
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
+    @objc func readyButtonTapped() {
+        guard let index = index else { return }
+        cellTaskDelegate?.readyButtonTapped(indexPath: index)
+    }
+    
     func setConstraints() {
-        self.addSubview(readyButton)
+        self.contentView.addSubview(readyButton)
         NSLayoutConstraint.activate([
             readyButton.centerYAnchor.constraint(equalTo: self.centerYAnchor, constant: 0),
             readyButton.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -20),
@@ -60,7 +66,14 @@ class TasksTableViewCell: UITableViewCell {
             tasksName.trailingAnchor.constraint(equalTo: readyButton.leadingAnchor, constant: -5),
             tasksName.heightAnchor.constraint(equalToConstant: 25)
         ])
-
+        
+        self.addSubview(taskDescription)
+        NSLayoutConstraint.activate([
+            taskDescription.topAnchor.constraint(equalTo: tasksName.bottomAnchor, constant: 10),
+            taskDescription.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 5),
+            taskDescription.trailingAnchor.constraint(equalTo: readyButton.leadingAnchor, constant: -5),
+            taskDescription.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -5)
+        ])
         
         
     }

@@ -9,7 +9,6 @@ import Foundation
 import UIKit
 
 class ScheduleTableViewCell: UITableViewCell {
-    
     let lessonName = UILabel(text: "Lesson name", font: .avenirNextDemiBold20(), textAlignment: .left)
     let teacherName = UILabel(text: "Teacher name", font: .avenirNext20(), textAlignment: .left)
     let lessonTime = UILabel(text: "8:00", font: .avenirNextDemiBold20(), textAlignment: .left)
@@ -23,10 +22,9 @@ class ScheduleTableViewCell: UITableViewCell {
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
 //MARK: Fix constrains bug (first way)
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.05) { [self] in
-            setConstraints()
-        }
+        setConstraints()
         self.selectionStyle = .none
+        
     }
 //MARK: Fix constrains bug (second way)
 //    override func layoutSubviews() { setConstraints() }
@@ -62,8 +60,6 @@ class ScheduleTableViewCell: UITableViewCell {
             bottomStackView.leadingAnchor.constraint(equalTo: lessonTime.trailingAnchor, constant: 5),
             bottomStackView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -5),
             bottomStackView.heightAnchor.constraint(equalToConstant: 25)
-            
-        
         ])
     }
 }

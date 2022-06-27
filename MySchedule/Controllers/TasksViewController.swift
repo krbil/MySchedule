@@ -95,20 +95,22 @@ extension TasksViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: idTasksCell, for: indexPath) as! TasksTableViewCell
-//        switch indexPath.row {
-//        case 0:
-//            cell.backgroundColor = #colorLiteral(red: 1, green: 0.6593179703, blue: 0.7289463282, alpha: 1)
-//        case 1:
-//            cell.backgroundColor = #colorLiteral(red: 0.9607843161, green: 0.7058823705, blue: 0.200000003, alpha: 1)
-//        default:
-//            cell.backgroundColor = #colorLiteral(red: 0.5607843161, green: 0.158823705, blue: 0.3000003, alpha: 1)
-//        }
+        cell.cellTaskDelegate = self
+        cell.index = indexPath
         return cell
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 80
     }
 }
+
+//MARK: PressReadyTasksButtonProtocol
+extension TasksViewController: PressReadyTasksButtonProtocol {
+    func readyButtonTapped(indexPath: IndexPath) {
+        print("Tap")
+    }
+}
+
 //MARK: FSCalendarDataSource, FSCalendarDelegate
 extension TasksViewController: FSCalendarDataSource, FSCalendarDelegate {
     func calendar(_ calendar: FSCalendar, boundingRectWillChange bounds: CGRect, animated: Bool) {

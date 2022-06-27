@@ -48,6 +48,7 @@ class ScheduleViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(ScheduleTableViewCell.self, forCellReuseIdentifier: idScheduleCell)
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(AddButtonTapped))
     }
     @objc func showHideButtonTapped() {
         if calendar.scope == .week {
@@ -58,6 +59,9 @@ class ScheduleViewController: UIViewController {
             showHideButton.setTitle("Show Calendar", for: .normal)
         }
     
+    }
+    @objc func AddButtonTapped() {
+        print("tapped")
     }
     
     //MARK: SwipeGestureRecognizer
@@ -150,7 +154,7 @@ extension ScheduleViewController {
             tableView.topAnchor.constraint(equalTo: showHideButton.bottomAnchor, constant: 10),
             tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 0),
             tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: 0),
-            tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -80)
+            tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -100)
             
         ])
     }
